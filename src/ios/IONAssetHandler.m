@@ -68,7 +68,7 @@
 {
     NSLog(@"stop");
 }
-
+NSDictionary *mimeTypes = nil;
 -(NSString *) getMimeType:(NSString *)fileExtension {
     if (fileExtension && ![fileExtension isEqualToString:@""]) {
         NSString *UTI = (__bridge_transfer NSString *)UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)fileExtension, NULL);
